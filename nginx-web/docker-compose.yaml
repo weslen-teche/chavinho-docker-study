@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  chavinho:
+    image: nginx:latest
+    container_name: chavinho_app
+    ports:
+      - 8080:80
+  chavinho2:
+    image: nginx:latest
+    container_name: chavinho_app2
+    ports:
+      - 8081:80
+  db:
+    image: mysql:5
+    container: meu_banco
+    ports:
+      33564:3306
+    

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chavinho Web</title>
+</head>
+<body>
+  <ngx-loading
+    [show]="loading"
+  ></ngx-loading>
+
+  <main class="container py-5">
+    <h1>Chavinho Quotes</h1>
+    <hr class="my-5">
+    <div class="row">
+      <div class="col-sm-6 col-lg-4 mb-4" *ngFor="let quote of quotes">
+        <div class="card p-3 text-end h-100">
+          <figure class="mb-0">
+            <blockquote class="blockquote">
+              <p>{{ quote.quote }}</p>
+            </blockquote>
+            <figcaption class="blockquote-footer mb-0 text-muted">
+              {{ quote.author }}
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
